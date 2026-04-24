@@ -10,7 +10,7 @@ public class StackTugasMahasiswa19 {
     }
 
     public boolean isFull() {
-        if (top == size) {
+        if (top == size - 1) {
             return true;
         } else {
             return false;
@@ -59,5 +59,18 @@ public class StackTugasMahasiswa19 {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
         }
         System.out.println("");
+    }
+
+    public Mahasiswa19 peekBottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.print("Stack kosong! Tidak ada tugas.");
+            return null;
+        }
+    }
+
+    public int count() {
+        return top + 1;
     }
 }
